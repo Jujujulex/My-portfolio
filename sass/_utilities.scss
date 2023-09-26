@@ -1,5 +1,5 @@
 .btn-link {
-  font-size: $fs-24;
+  font-size: $fs-16;
   line-height: 26px;
   display: inline-block;
   border-bottom: 2px solid $clr-tertiary;
@@ -11,6 +11,10 @@
   letter-spacing: 2.3px;
   transition: all 0.2s ease;
   cursor: pointer;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: $fs-default;
+  }
 
   &:hover {
     color: $clr-tertiary;
@@ -28,11 +32,15 @@
   }
 
   @media only screen and (max-width: $bp-medium) {
-    font-size: 5.5rem;
+    font-size: 6rem;
   }
 
   @media only screen and (max-width: $bp-small) {
-    font-size: 3.5rem;
+    font-size: 4rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 3rem;
   }
 }
 
@@ -40,10 +48,10 @@
   max-width: 1110px;
   margin-inline: auto;
 
-  @media only screen and (max-width: $bp-medium) {
-    margin: 0;
-    padding: 0;
-  }
+  // @media only screen and (max-width: $bp-medium) {
+  //   margin: 0;
+  //   padding: 0;
+  // }
 }
 
 .dark {
