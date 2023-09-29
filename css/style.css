@@ -88,6 +88,19 @@ svg {
     transform: rotate(190deg);
   }
 }
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 .section__hero {
   margin-bottom: 8rem;
 }
@@ -117,6 +130,11 @@ svg {
   left: 68%;
   top: 0;
   flex-shrink: 0;
+  border: 2px solid #4ee1a0;
+  transition: all 300ms ease-in-out;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
 }
 @media only screen and (max-width: 74.94em) {
   .section__hero-avatar {
@@ -254,6 +272,37 @@ svg {
   color: #4ee1a0;
   cursor: pointer;
 }
+.section__skills-progress {
+  height: 1.2rem;
+  overflow: hidden;
+  font-size: 0.5rem;
+  background-color: white;
+  border-radius: 100vw;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+}
+.section__skills--progress-bar {
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 2px 5px;
+  background-color: #4ee1a0;
+  color: #fff;
+  border: none;
+  text-align: center;
+  font-weight: var(--fw-lg);
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  transition: width 0.6s ease;
+}
+.section__skills--progress-bar:hover {
+  background-color: white;
+  color: #4ee1a0;
+}
 .section__skills .skills__bg-img {
   position: absolute;
   bottom: 0;
@@ -306,9 +355,11 @@ svg {
 }
 .section__projects-container .project--image {
   width: 100%;
+  transition: all 0.3s;
 }
-.section__projects-container .image:hover .image__blur {
-  opacity: 1;
+.section__projects-container .project--image:hover {
+  opacity: 0.2;
+  transform: scale(1.05) translateY(-0.5rem);
 }
 .section__projects-container .image:hover .section__projects--container-hovered {
   opacity: 1;
@@ -619,7 +670,7 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   .hero__bg-img-2 {
-    transform: translateX(40%);
+    transform: translateX(30%);
   }
 }
 
@@ -676,10 +727,6 @@ main {
 .container {
   max-width: 1110px;
   margin-inline: auto;
-}
-
-.dark {
-  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

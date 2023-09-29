@@ -12,7 +12,6 @@
   padding-left: 2.8rem;
 
   @media only screen and (max-width: $bp-large) {
-    // padding: 2.5rem 3.2rem;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -24,13 +23,6 @@
 
   &--header {
     position: absolute;
-    // top: 0;
-    // left: 50%;
-    // transform: translatex(-50%);
-
-    // @media only screen and (max-width: $bp-small) {
-    //   padding-top: 3rem;
-    // }
   }
 
   &__logo {
@@ -41,12 +33,10 @@
 
     @media only screen and (max-width: $bp-small) {
       padding-top: 1.5rem;
-      // font-size: $fs-48;
     }
 
     @media only screen and (max-width: $bp-smallest) {
       padding-top: 0;
-      // font-size: $fs-48;
     }
   }
 
@@ -63,13 +53,6 @@
       padding-right: 0;
       gap: 2rem;
     }
-
-    // @media only screen and (max-width: $bp-medium) {
-    //   width: 40%;
-    //   justify-items: center;
-    //   align-items: center;
-    //   margin-left: 10rem;
-    // }
 
     @media only screen and (max-width: $bp-small) {
       width: 30%;
@@ -91,13 +74,6 @@
     }
 
     @media only screen and (max-width: $bp-large) {
-      // width: 25%;
-      // height: 25%;
     }
-
-    // @media only screen and (max-width: $bp-medium) {
-    //   width: 50%;
-    //   height: 50%;
-    // }
   }
 }
